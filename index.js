@@ -17,6 +17,7 @@ const n4 = 5;
 // arithmetic operators and a comparison.
 const isSum50 = (n1 + n2 + n3 + n4) == 50;
 console.log(isSum50)
+console.log(`The sum of the four numbers is 50: ${isSum50}`);
 
 // Check two: at least two odd numbers
 // Here, we use modulus to check if something is odd.
@@ -24,12 +25,15 @@ console.log(isSum50)
 // arithmetic to count the total number of odd numbers.
 const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
 console.log(isTwoOdd)
+console.log(`At least two numbers are odd: ${isTwoOdd}`);
 
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 console.log(isOver25)
+console.log(`At least one of the four numbers is greater than 25: ${isOver25}`);
+
 
 // Check four: all unique numbers
 // This is long, and there are more efficient
@@ -37,6 +41,8 @@ console.log(isOver25)
 // that we will review later.
 const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 console.log(isUnique)
+console.log(`All four numbers are unique: ${isUnique}`);
+
 
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
@@ -44,6 +50,7 @@ console.log(isUnique)
 // "isUnder25" as an alternative.
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 console.log(isValid)
+console.log(`The four numbers are valid according to the provided criteria: ${isValid}`);
 
 // Finally, log the results.
 console.log(isValid);
@@ -63,11 +70,13 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 // Check if all numbers are divisible by 5. Cache the result in a variable.
 const isDivisibleBy5 = (n1 % 5 === 0) && (n2 % 5 === 0) && (n3 % 5 === 0) && (n4 % 5 === 0);
 console.log(isDivisibleBy5);
+console.log(`All four numbers are divisible by 5: ${isDivisibleBy5}`);
 
 
 // Check if the first number is larger than the last. Cache the result in a variable.  
 const isFirstLarger = n1 > n4;
 console.log(isFirstLarger);
+console.log(`The first number is larger than the last number: ${isFirstLarger}`);
 
 
 
@@ -75,12 +84,13 @@ console.log(isFirstLarger);
 // Subtract the first number from the second number. 
 const subtract = n2 - n1;
 console.log(subtract);
+console.log(`The result of subtracting the first number from the second number is: ${subtract}`);
 
 
 // Multiply the result by the third number. 
 const multiply = subtract * n3;
 console.log(multiply);
-
+console.log(`The result of multiplying by the third number is: ${multiply}`);
 
 // Find the remainder of dividing the result by the fourth number.  
 const remainder = multiply % n4;
@@ -94,4 +104,14 @@ let score = 20;
 const is25OrLess = score <= 25;
 if (is25OrLess) {
   console.log("The score is 25 or less.");
+}
+
+console.log(`The current score is ${score}. Is it 25 or less? ${is25OrLess}`);
+
+if (is25OrLess) {
+  // This runs if is25OrLess is true
+    console.log(`Result: The score of ${score} is within the limit (25 or less).`);
+} else {
+    // This runs if is25OrLess is false
+    console.log(`Result: The score of ${score} is over the limit.`);
 }
