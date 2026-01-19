@@ -203,7 +203,7 @@ console.log(`At 75mph, the trip will take approximately ${timeAt75} hours.`);
 Which makes the most sense for the trip? */
 console.log(`Result Comparison:`);
 console.log(`- 55mph: $${costAt55} (Within Budget), ${timeAt55} hours.`);
-console.log(`- 60mph: $${costAt60} (Within Budget), ${timeAt60} hoours`);
+console.log(`- 60mph: $${costAt60} (Within Budget), ${timeAt60} hours`);
 console.log(`- 75mph: $${costAt75} (Over Budget), ${timeAt75} hours`);
 
 if (isBudgetEnough75) {
@@ -214,3 +214,4 @@ if (isBudgetEnough75) {
     console.log("Recommendation: Drive 55mph. It's the only option within budget.");
   }
 
+ 
